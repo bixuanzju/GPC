@@ -1,4 +1,7 @@
-# Type checker
+# GPC - A Type Checker for Gradual Typing
+
+
+For more details, see our ESOP'18 paper "Consistent Subtyping for All".
 
 ## Syntax
 
