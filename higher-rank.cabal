@@ -1,0 +1,56 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 33fba09a7d45dab0c4187a812cff73cfc39634be1cd7623af695ac11b4dafbc7
+
+name:           higher-rank
+version:        0.0.0
+synopsis:       A new Haskeleton package.
+description:    higher-rank is a new Haskeleton package.
+category:       Other
+maintainer:     Alexis King
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    package.yaml
+    README.md
+    stack.yaml
+
+library
+  exposed-modules:
+      Language.HigherRank.Main
+      Language.HigherRank.Parse
+      Language.HigherRank.Print
+      Language.HigherRank.Typecheck
+      Language.HigherRank.Types
+  other-modules:
+      Paths_higher_rank
+  hs-source-dirs:
+      library
+  default-extensions: ApplicativeDo GeneralizedNewtypeDeriving LambdaCase StandaloneDeriving
+  ghc-options: -Wall
+  build-depends:
+      base
+    , containers
+    , haskeline
+    , megaparsec
+    , mtl
+    , prettyprinter
+    , scientific
+    , unbound-generics
+  default-language: Haskell2010
+
+executable higher-rank
+  main-is: Main.hs
+  other-modules:
+      Paths_higher_rank
+  hs-source-dirs:
+      executable
+  default-extensions: ApplicativeDo GeneralizedNewtypeDeriving LambdaCase StandaloneDeriving
+  ghc-options: -Wall -rtsopts -threaded -with-rtsopts=-N
+  build-depends:
+      base
+    , higher-rank
+  default-language: Haskell2010
